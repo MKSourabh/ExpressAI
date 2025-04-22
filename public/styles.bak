@@ -1,0 +1,132 @@
+/* filepath: c:\Users\kiree\GitHub Projects\ExpressAI\public\styles.css */
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Mono&display=swap');
+
+/* Apply a dark theme to the entire page */
+body {
+    background-color: #121212; /* Dark gray background */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter or fallback to Arial */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Center the app content */
+#app {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the heading */
+h1 {
+    font-family: 'Roboto Mono', 'Helvetica Neue', Arial, sans-serif; /* Use Roboto Mono or fallback */
+    font-weight: 700; /* Bold weight */
+    font-size: 2rem;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Camera container styling */
+#camera-container {
+    width: 640px;
+    height: 480px;
+    background-color: #000000; /* Black background for the video feed */
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add spacing below the camera */
+}
+
+/* Mirror the camera feed */
+#camera-feed {
+    -webkit-transform: scaleX(-1); /* For Safari compatibility */
+    transform: scaleX(-1); /* Flip the video horizontally */
+}
+
+/* General container for emotion bars */
+#emotion-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between bars */
+    width: 100%; /* Ensure it spans the container */
+    max-width: 600px; /* Optional: Limit the width */
+    margin: 0 auto; /* Center the bars horizontally */
+}
+
+/* Individual emotion bar container */
+.emotion-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Space between label, bar, and percentage */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Emotion label */
+.emotion-label {
+    flex: 1; /* Allow the label to take up space */
+    text-align: left;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Bar container */
+.bar {
+    flex: 4; /* Allow the bar to take up more space */
+    height: 20px;
+    background-color: #e0e0e02c;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Bar fill */
+.bar-fill {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Emotion-specific bar colors */
+#neutral-bar .bar-fill {
+    background-color: #ffffff; /* Neutral - Gray */
+}
+
+#happiness-bar .bar-fill {
+    background-color: #FFD700; /* Happiness - Gold */
+}
+
+#sadness-bar .bar-fill {
+    background-color: #1E90FF; /* Sadness - Blue */
+}
+
+#fear-bar .bar-fill {
+    background-color: #8A2BE2; /* Fear - Violet */
+}
+
+#anger-bar .bar-fill {
+    background-color: #FF4500; /* Anger - Red-Orange */
+}
+
+#surprise-bar .bar-fill {
+    background-color: #32CD32; /* Surprise - Lime Green */
+}
+
+#disgust-bar .bar-fill {
+    background-color: #556B2F; /* Disgust - Olive Green */
+}
+
+/* Percentage label */
+.percentage {
+    flex: 1; /* Allow the percentage to take up space */
+    text-align: right;
+    white-space: nowrap; /* Prevent text wrapping */
+}
