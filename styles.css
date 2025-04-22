@@ -172,7 +172,7 @@ canvas {
     }
 
     #camera-container {
-        width: 100%; /* Use full width of the screen */
+        width: 70%; /* Use full width of the screen */
         height: auto; /* Maintain aspect ratio */
         max-width: 400px; /* Limit the maximum width */
         max-height: 400px; /* Limit the maximum height */
