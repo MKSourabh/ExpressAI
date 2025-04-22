@@ -1,27 +1,26 @@
 /* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Mono&display=swap');
 
-/* Apply a dark theme to the entire page */
+/* General styles for all devices */
 body {
-    background-color: #121212; /* Dark gray background */
-    color: #ffffff; /* White text for contrast */
-    font-family: 'Inter', Arial, sans-serif; /* Use Inter or fallback to Arial */
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     min-height: 100vh; /* Full viewport height */
 }
 
-/* Center the app content */
 #app {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center horizontally */
     text-align: center;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
 }
 
 /* Style the heading */
@@ -42,8 +41,11 @@ h1 {
     border: 2px solid #ffffff;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px; /* Add spacing below the camera */
+    margin: 0 auto;
+    margin-bottom: 0px; /* Add spacing below the camera */
+    max-width: 100%;
     position: relative; /* Ensure container is relative */
+    height: auto;
 }
 
 /* Mirror the camera feed */
@@ -63,10 +65,11 @@ canvas {
 
 #user-info {
     font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     line-height: 0.5; /* Adjust line height to reduce spacing */
+    margin-top: 0px;
 }
 
 /* General container for emotion bars */
@@ -77,6 +80,7 @@ canvas {
     width: 100%; /* Ensure it spans the container */
     max-width: 600px; /* Optional: Limit the width */
     margin: 0 auto; /* Center the bars horizontally */
+    margin-top: 0px;
 }
 
 /* Individual emotion bar container */
@@ -158,4 +162,83 @@ canvas {
     font-size: 20px; /* Adjust the size of the emoji */
     margin-left: 5px; /* Add spacing between the percentage and emoji */
     vertical-align: middle; /* Align the emoji with the percentage */
+}
+
+/* Styles for mobile view */
+@media (max-width: 430px) { /* iPhone 14 Pro Max width */
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    #camera-container {
+        width: 100%; /* Use full width of the screen */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 400px; /* Limit the maximum width */
+        max-height: 400px; /* Limit the maximum height */
+        aspect-ratio: 1; /* Ensure the camera feed is square */
+        overflow: hidden; /* Hide any overflow */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000; /* Fallback background color */
+    }
+
+    video {
+        width: 100%; /* Ensure the video fits within the container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the face aligns with the grid */
+    }
+
+    #user-info {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    #emotion-bars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .emotion-bar {
+        display: flex;
+        flex-direction: row; /* Align items horizontally */
+        align-items: center;
+        justify-content: space-between;
+        width: 90%; /* Fit within the screen */
+        margin-bottom: 10px;
+    }
+
+    .emotion-label {
+        font-size: 0.9rem;
+        flex: 1; /* Take up space for alignment */
+        text-align: left;
+    }
+
+    .bar {
+        flex: 2; /* Make the bar wider */
+        height: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 0 10px; /* Add spacing between label and percentage */
+    }
+
+    .bar-fill {
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .percentage {
+        font-size: 0.9rem;
+        flex: 1; /* Take up space for alignment */
+        text-align: right;
+    }
+
+    .static-emoji {
+        font-size: 1.2rem;
+        margin-left: 10px; /* Add spacing between percentage and emoji */
+    }
 }
