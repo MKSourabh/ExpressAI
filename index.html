@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExpressAI - Emotion Detection</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
     <script defer src="app.js"></script>
 </head>
@@ -26,6 +27,7 @@
                     <div class="bar-fill positive" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Neutral level"></div>
                 </div>
                 <span class="percentage" id="neutral-percentage">0%</span>
+                <span class="static-emoji">😐</span>
             </div>            
             <div class="emotion-bar" id="happiness-bar" aria-label="Happiness level">
                 <span class="emotion-label">Happiness: </span>
@@ -33,6 +35,7 @@
                     <div class="bar-fill positive" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Happiness level"></div>
                 </div>
                 <span class="percentage" id="happiness-percentage">0%</span>
+                <span class="static-emoji">😊</span>
             </div>
             <div class="emotion-bar" id="sadness-bar" aria-label="Sadness level">
                 <span class="emotion-label">Sadness: </span>
@@ -40,6 +43,7 @@
                     <div class="bar-fill negative" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Sadness level"></div>
                 </div>
                 <span class="percentage" id="sadness-percentage">0%</span>
+                <span class="static-emoji">😢</span>
             </div>
             <div class="emotion-bar" id="fear-bar" aria-label="Fear level">
                 <span class="emotion-label">Fear: </span>
@@ -47,6 +51,7 @@
                     <div class="bar-fill negative" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Fear level"></div>
                 </div>
                 <span class="percentage" id="fear-percentage">0%</span>
+                <span class="static-emoji">😨</span>
             </div>
             <div class="emotion-bar" id="anger-bar" aria-label="Anger level">
                 <span class="emotion-label">Anger: </span>
@@ -54,6 +59,7 @@
                     <div class="bar-fill negative" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Anger level"></div>
                 </div>
                 <span class="percentage" id="anger-percentage">0%</span>
+                <span class="static-emoji">😡</span>
             </div>
             <div class="emotion-bar" id="surprise-bar" aria-label="Surprise level">
                 <span class="emotion-label">Surprise: </span>
@@ -61,6 +67,7 @@
                     <div class="bar-fill positive" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Surprise level"></div>
                 </div>
                 <span class="percentage" id="surprise-percentage">0%</span>
+                <span class="static-emoji">😲</span>
             </div>
             <div class="emotion-bar" id="disgust-bar" aria-label="Disgust level">
                 <span class="emotion-label">Disgust: </span>
@@ -68,6 +75,7 @@
                     <div class="bar-fill negative" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Disgust level"></div>
                 </div>
                 <span class="percentage" id="disgust-percentage">0%</span>
+                <span class="static-emoji">🤢</span>
             </div>
         </div>
     </div>
