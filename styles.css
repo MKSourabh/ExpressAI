@@ -21,6 +21,8 @@ body {
     align-items: center; /* Center horizontally */
     text-align: center;
     padding: 10px;
+    padding-top: 0; /* Remove any padding at the top */
+    margin-top: 0; /* Remove any margin at the top */
 }
 
 /* Style the heading */
@@ -31,6 +33,10 @@ h1 {
     color: #ffffff; /* White text */
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.2rem; /* Keep the font size for mobile view */
+    margin-top: 0; /* Remove any top margin */
+    margin-bottom: 10px; /* Keep the bottom margin */
+    padding-top: 0; /* Remove any top padding */
 }
 
 /* Camera container styling */
@@ -167,8 +173,9 @@ canvas {
 /* Styles for mobile view */
 @media (max-width: 430px) { /* iPhone 14 Pro Max width */
     h1 {
-        font-size: 1.2rem;
-        margin-bottom: 2px;
+        font-size: 1.2rem;;
+        margin-top: 0; /* Remove any top margin */
+        margin-bottom: 10px;
     }
 
     #camera-container {
@@ -191,7 +198,7 @@ canvas {
     }
 
     #user-info {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         margin-bottom: 2px;
     }
 
@@ -212,7 +219,7 @@ canvas {
     }
 
     .emotion-label {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         flex: 1; /* Take up space for alignment */
         text-align: left;
     }
@@ -232,13 +239,13 @@ canvas {
     }
 
     .percentage {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         flex: 1; /* Take up space for alignment */
         text-align: right;
     }
 
     .static-emoji {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-left: 10px; /* Add spacing between percentage and emoji */
     }
 }
