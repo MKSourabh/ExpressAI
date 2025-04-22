@@ -23,6 +23,7 @@ body {
     padding: 10px;
     padding-top: 0; /* Remove any padding at the top */
     margin-top: 0; /* Remove any margin at the top */
+    padding-bottom: 50px; /* Adjust based on the height of the footer */
 }
 
 /* Style the heading */
@@ -170,6 +171,52 @@ canvas {
     vertical-align: middle; /* Align the emoji with the percentage */
 }
 
+/* General styles for the creator tab */
+#creator-tab {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000; /* Match the background color */
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    border-top: 1px solid #333; /* Optional: Add a subtle border */
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Instagram follow section */
+.follow-instagram {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.instagram-logo {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.follow-instagram span {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.follow-instagram a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.follow-instagram a:hover {
+    text-decoration: underline;
+}
+
 /* Styles for mobile view */
 @media (max-width: 430px) { /* iPhone 14 Pro Max width */
     h1 {
@@ -247,5 +294,19 @@ canvas {
     .static-emoji {
         font-size: 1rem;
         margin-left: 5px; /* Add spacing between percentage and emoji */
+    }
+
+    #creator-tab {
+        font-size: 0.8rem; /* Slightly smaller font for mobile */
+        padding: 4px 0;
+    }
+
+    .instagram-logo {
+        width: 14px;
+        height: 14px;
+    }
+
+    .follow-instagram a {
+        font-size: 0.8rem;
     }
 }
