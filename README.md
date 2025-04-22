@@ -8,6 +8,10 @@ ExpressAI is a real-time facial expression recognition application that utilizes
 - Emotion visualization with synchronized percentage display
 - User-friendly interface
 
+## Live Demo
+
+Check out the live demo of the application here: [ExpressAI Live Demo](https://mksourabh.github.io/ExpressAI/)
+
 ## Project Structure
 
 ```
