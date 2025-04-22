@@ -168,7 +168,7 @@ canvas {
 @media (max-width: 430px) { /* iPhone 14 Pro Max width */
     h1 {
         font-size: 1.2rem;
-        margin-bottom: 10px;
+        margin-bottom: 2px;
     }
 
     #camera-container {
@@ -191,15 +191,15 @@ canvas {
     }
 
     #user-info {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
+        font-size: 0.7rem;
+        margin-bottom: 2px;
     }
 
     #emotion-bars {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 2px;
     }
 
     .emotion-bar {
@@ -208,11 +208,11 @@ canvas {
         align-items: center;
         justify-content: space-between;
         width: 90%; /* Fit within the screen */
-        margin-bottom: 10px;
+        margin-bottom: 2px;
     }
 
     .emotion-label {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         flex: 1; /* Take up space for alignment */
         text-align: left;
     }
@@ -232,13 +232,13 @@ canvas {
     }
 
     .percentage {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         flex: 1; /* Take up space for alignment */
         text-align: right;
     }
 
     .static-emoji {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         margin-left: 10px; /* Add spacing between percentage and emoji */
     }
 }
