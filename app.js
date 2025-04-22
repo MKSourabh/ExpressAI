@@ -40,6 +40,25 @@ async function loadModels() {
     }
 }
 
+// Draw confidence level in a fixed box at the bottom-right corner
+function drawConfidenceBox(context, confidence) {
+    const boxWidth = 200;
+    const boxHeight = 20;
+    const x = context.canvas.width - boxWidth - 0; // 10px margin from the right
+    const y = context.canvas.height - boxHeight - 0; // 10px margin from the bottom
+
+    // Draw the box
+    context.fillStyle = 'rgba(0, 0, 0, 0.85)'; // Semi-transparent black background
+    context.fillRect(x, y, boxWidth, boxHeight);
+
+    // Draw the text
+    context.font = '16px Inter, sans-serif'; // Use a readable font
+    context.fillStyle = 'white';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(`Confidence Level: ${confidence}%`, x + boxWidth / 2, y + boxHeight / 2);
+}
+
 // Start emotion detection
 async function startEmotionDetection() {
     const video = document.getElementById('camera-feed');
@@ -89,10 +108,8 @@ async function startEmotionDetection() {
                     const box = detection.detection.box;
                     const score = (detection.detection.score * 100).toFixed(2); // Convert to percentage
 
-                    // Draw only the percentage number
-                    context.font = '16px Arial';
-                    context.fillStyle = 'blue';
-                    context.fillText(`${score}%`, box.x + box.width - 50, box.y - 10); // Adjust position as needed
+                    // Draw the confidence box
+                    drawConfidenceBox(context, score);
                 });
 
                 if (detections.length > 0) {

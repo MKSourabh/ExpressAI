@@ -62,17 +62,18 @@ canvas {
 }
 
 #user-info {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    color: white;
     margin-bottom: 10px;
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 14px;
-    color: #ffffff;
+    line-height: 0.5; /* Adjust line height to reduce spacing */
 }
 
 /* General container for emotion bars */
 #emotion-bars {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Add spacing between bars */
+    gap: 5px; /* Add spacing between bars */
     width: 100%; /* Ensure it spans the container */
     max-width: 600px; /* Optional: Limit the width */
     margin: 0 auto; /* Center the bars horizontally */
@@ -94,6 +95,8 @@ canvas {
     text-align: left;
     white-space: nowrap; /* Prevent text wrapping */
     margin-right: 5px; /* Add slight spacing between label and bar */
+    font-size: 16px; /* Adjust the size as needed */
+    color: white; /* Optional: Ensure the text color is consistent */
 }
 
 /* Bar container */
@@ -146,4 +149,13 @@ canvas {
     text-align: right;
     white-space: nowrap; /* Prevent text wrapping */
     margin-left: 5px; /* Add slight spacing between bar and percentage */
+    font-size: 16px; /* Adjust the size as needed */
+    color: white; /* Optional: Ensure the text color is consistent */
+}
+
+/* Static emoji styling */
+.static-emoji {
+    font-size: 20px; /* Adjust the size of the emoji */
+    margin-left: 5px; /* Add spacing between the percentage and emoji */
+    vertical-align: middle; /* Align the emoji with the percentage */
 }
