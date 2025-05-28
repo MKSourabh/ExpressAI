@@ -2,6 +2,10 @@
 
 ExpressAI is a real-time facial expression recognition application that utilizes camera access to detect and display emotions such as happiness and sadness. The application visualizes these emotions through horizontal bars that fill and empty based on the intensity of the detected emotions.
 
+## Live 
+
+[ExpressAI - Emotion Detection](mksourabh.github.io/ExpressAI/)
+
 ## Features
 
 - Real-time facial expression scanning
